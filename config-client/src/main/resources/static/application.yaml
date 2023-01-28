@@ -1,0 +1,15 @@
+app:
+  main-settings:
+    override-a: local override
+main-settings:
+  property-a: local value 10
+  override-a: local override
+app1-stuff:
+  property-2: local value 20
+  property-3: local value 30
+additional-settings:
+  additional1: local val1
+  additional2: local val2
+mongo:
+  user: app1
+  dbname: some_database

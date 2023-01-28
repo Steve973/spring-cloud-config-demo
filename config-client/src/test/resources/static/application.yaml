@@ -1,0 +1,21 @@
+app:
+  main-settings:
+    override-a: local override
+main-settings:
+  property-a: local value 10
+  property-b: git app value 2
+  property-c: git app value 3
+  property-d: git app value 4
+  override-a: local override
+app1-stuff:
+  property-1: git value a
+  property-2: local value 20
+  property-3: local value 30
+additional-settings:
+  additional1: local val1
+  additional2: local val2
+mongo:
+  user: app1
+  dbname: some_database
+mongodb:
+  url: mongodb://${${mongo.user}.user}:${${mongo.user}.pass}@127.0.0.1:27017/${mongo.dbname}/

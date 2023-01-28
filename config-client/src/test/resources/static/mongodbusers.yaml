@@ -1,0 +1,7 @@
+root:
+  user: superuser
+  pass: superpass
+
+app1:
+  user: app1
+  pass: app1pass

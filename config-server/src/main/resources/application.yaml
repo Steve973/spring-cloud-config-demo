@@ -1,0 +1,12 @@
+app:
+  name: config-server-demo
+  description: This spring boot app demonstrates a spring cloud config server
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Steve973/cloud-configs.git
+          default-label: main
+          search-paths: app1
