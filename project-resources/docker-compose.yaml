@@ -1,0 +1,11 @@
+services:
+  config-server:
+    image: docker.io/library/config-server:latest
+    container_name: config-server
+    ports:
+      - '8080:8080'
+  config-client:
+    image: docker.io/library/config-client:latest
+    container_name: config-client
+    ports:
+      - '8081:8081'
