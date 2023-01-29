@@ -30,6 +30,16 @@ subprojects {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
     }
 
+    tasks.named("bootJar") {
+        layered {
+            enabled = true
+            includeLayerTools = true
+        }
+    }
+
+    tasks.named("bootBuildImage") {
+        docker.bindHostToBuilder = true
+    }
     tasks.named('test') {
         useJUnitPlatform()
     }
