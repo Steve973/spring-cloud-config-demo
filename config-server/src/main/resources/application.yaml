@@ -10,3 +10,9 @@ spring:
           uri: https://github.com/Steve973/cloud-configs.git
           default-label: main
           search-paths: app1
+          refresh-rate: 60
+  rabbitmq:
+    host: rabbitmq-broker
+    port: 5672
+    username: guest
+    password: guest

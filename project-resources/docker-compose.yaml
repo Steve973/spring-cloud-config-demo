@@ -1,4 +1,10 @@
 services:
+  rabbitmq-broker:
+    image: docker.io/library/rabbitmq:3-management
+    container_name: rabbitmq-broker
+    ports:
+      - '15672:15672'
+      - '5672:5672'
   config-server:
     image: docker.io/library/config-server:latest
     container_name: config-server

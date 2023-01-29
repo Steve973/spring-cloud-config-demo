@@ -3,7 +3,13 @@ server:
   servlet:
     context-path: /app1
 spring:
+  application:
+    name: app1
   cloud:
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
     config:
       retry:
         initial-interval: 2000
@@ -11,9 +17,14 @@ spring:
         max-attempts: 10
         multiplier: 1.1
       fail-fast: true
-  profiles:
-    active: default,local
-  application:
-    name: app1
   config:
     import: optional:configserver:http://config-server:8080
+  profiles:
+    active:
+      - default
+      - local
+  rabbitmq:
+    host: rabbitmq-broker
+    port: 5672
+    username: guest
+    password: guest
