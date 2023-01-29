@@ -1,11 +1,13 @@
 package com.example.configclient.web;
 
 import org.bson.Document;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RefreshScope
 public class ConfigClientController {
 
     final String mainPropertyA;
