@@ -38,7 +38,10 @@ subprojects {
     }
 
     tasks.named("bootBuildImage") {
-        docker.bindHostToBuilder = true
+        docker {
+            host = "unix://${System.env.XDG_RUNTIME_DIR}/podman/podman.sock"
+            bindHostToBuilder = true
+        }
     }
     tasks.named('test') {
         useJUnitPlatform()
